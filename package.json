@@ -1,0 +1,26 @@
+{
+  "name": "mkdir-native",
+  "version": "0.0.1",
+  "description": "Create directory in you fs",
+  "main": "index.js",
+  "gypfile": true,
+  "scripts": {
+    "start": "node index.js",
+    "build:dev": "node-gyp build --debug",
+    "build": "node-gyp build",
+    "rebuild:dev": "node-gyp rebuild --debug",
+    "rebuild": "node-gyp 16 rebuild",
+    "clean": "node-gyp clean"
+  },
+  "keywords": [
+    "dir",
+    "native"
+  ],
+  "author": "Assaf Sapir <assapir@github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "js-string-escape": "^1.0.1",
+    "node-addon-api": "^3.0.2"
+  }
+}

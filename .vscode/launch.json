@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [{
+       "type": "lldb",
+       "request": "launch",
+       "name": "Debug native",
+       "preLaunchTask": "npm: rebuild:dev",
+       "program": "node",
+       "args": [
+          "${workspaceRoot}/test/mkDirAsync.js"
+       ]
+    },
+   {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch tests",
+      "preLaunchTask": "npm: rebuild:dev",
+      "program": "${workspaceFolder}/test/mkDirAsync.js",
+      "skipFiles": [
+         "<node_internals>/**"
+      ]
+   }]
+  }
