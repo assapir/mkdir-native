@@ -8,14 +8,18 @@ MkDirWorker::MkDirWorker(Function& callback, const std::string& path)
     : AsyncWorker(callback), path(path) {};
 
 void MkDirWorker::Execute() {
+    std::error_code ec;
     auto success = fs::create_directories(path, ec);
     if (!success) {
+        if (!ec) {
+            return; // already exist, nothing to do
+        }
         const auto msg = "I wasn\'t able to do that, because: " + ec.message();
         SetError(msg);
     }
 };
 
 void MkDirWorker::OnOK() {
-    std::string msg = "ok! we are good to go with " + path + " " + ec.message();
+    auto msg = "ok! we are good to go with " + path;
     Callback().Call({Env().Undefined(), String::New(Env(), msg)});
 };

@@ -18,7 +18,6 @@ class MkDirWorker : public AsyncWorker {
 
     private:
         const std::string path;
-        std::error_code ec;
 };
 
 #endif // SRC_MKDIR_H

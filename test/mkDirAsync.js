@@ -3,9 +3,9 @@ const fs = require('fs')
 const mkdir = require('../index')
 
 const test = () => {
-  mkdir('this', (err, msg) => {
+  mkdir('this/app/a/b', (err, msg) => {
     if (err) throw err
-    assert.ok(fs.statSync('this'))
+    assert.ok(fs.statSync('this/app/a/b'))
   })
 }
 
