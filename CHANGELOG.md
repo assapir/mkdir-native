@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/assapir/mkdir-native/compare/v0.2.0...v0.2.1) (2020-10-18)
+
+
+### Bug Fixes
+
+* don\'t do thing the stupid way ([a074a3b](https://github.com/assapir/mkdir-native/commit/a074a3bd5baa7319a6a332a3d7ef55917f0a4b47))
+
 ## [0.2.0](https://github.com/assapir/mkdir-native/compare/v0.1.0...v0.2.0) (2020-10-18)
 
 
