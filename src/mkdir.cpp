@@ -10,10 +10,7 @@ MkDirWorker::MkDirWorker(Function& callback, const std::string& path)
 void MkDirWorker::Execute() {
     std::error_code ec;
     auto success = fs::create_directories(path, ec);
-    if (!success) {
-        if (!ec) {
-            return; // already exist, nothing to do
-        }
+    if (!success && ec) { // if no error code, already exist, nothing to do
         const auto msg = "I wasn\'t able to do that, because: " + ec.message();
         SetError(msg);
     }
